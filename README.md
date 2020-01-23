@@ -1,4 +1,4 @@
 ## HTML Table Generator.
 
 
-#### DEMO 
+#### DEMO https://ohotnikarturik.github.io/table-generator/
