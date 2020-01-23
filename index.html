@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Table Generator</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Alata|Bangers|Fira+Sans:200,200i,400,500,500i,600,700i,800,800i,900,900i|Gelasio:400,500i,600i,700i|Lato:100,100i,300,400,700,900,900i|Lora:400,700,700i|Merriweather:400,700,700i,900i|Montserrat:100i,200,200i,300,400,600,700,700i,800i,900,900i|Noto+Sans+KR:100,400|Open+Sans+Condensed:300,700|Open+Sans:400,600i,700,700i,800|Oswald:300,400,500,600|PT+Serif:400,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700i,800,800i,900i|Poppins:100,100i,200,200i,300i,400,400i|Raleway:100i,200,200i,300,400,500,500i,600i,800,800i,900|Roboto+Condensed:300,400,400i,700,700i|Six+Caps|Titillium+Web:200,200i,300,400,600,600i,700i,900|Ubuntu:400,500,500i,700,700i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="wrapper">
+	<div class="top">
+		<div class="container container__form">
+			<h1 class="title">HTML Table Generator</h1>
+			<form id="form">
+				<div class="form__row">
+					<label class="form__block">
+						<span class="form__title">Numbers of rows:</span>
+						<input type="number" name="numberRows" placeholder="10" class="form__input">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Number of columns:</span>
+						<input type="number" name="numberColumns" placeholder="10" class="form__input">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Table width in percentages:</span>
+						<input type="number" name="tableWidth" placeholder="100" class="form__input">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Border width in pixels:</span>
+						<input type="number" name="borderWidth" placeholder="5" class="form__input">
+					</label>
+				</div>
+				<div class="form__row">
+					<label class="form__block">
+						<span class="form__title">Head background color:</span>
+						<input type="color" name="headBgColor" value="#000000" name="favcolor" class="form__input-color">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Row background color(even):</span>
+						<input type="color" name="rowBgColorEven" value="#ffffff" name="favcolor" class="form__input-color">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Row background color(odd):</span>
+						<input type="color" name="rowBgColorOdd" value="#d4cccc" name="favcolor" class="form__input-color">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Border color:</span>
+						<input type="color" name="borderColor" value="#c07e7b" name="favcolor" class="form__input-color">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Font color:</span>
+						<input type="color" name="fontColor" value="#0096cc" name="favcolor" class="form__input-color">
+					</label>
+				</div>
+				<div class="form__row">
+					<label class="form__block">
+						<span class="form__title">Border collapse:</span>
+						<input type="checkbox" name="borderCollapse" class="form__checkbox">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Font type:</span>
+						<select name="fontFamily" class="form__select">
+							<option value="#">Arial Narrow</option>
+							<optgroup>
+								<option value="Lato">Lato</option>
+								<option value="Open Sans">Open Sans</option>
+								<option value="Gelasio">Gelasio</option>
+								<option value="Montserrat">Montserrat</option>
+								<option value="Roboto Condensed">Roboto Condensed</option>
+								<option value="Raleway">Raleway</option>
+								<option value="Poppins">Poppins</option>
+								<option value="Merriweather">Merriweather</option>
+								<option value="Ubuntu">Ubuntu</option>
+								<option value="Six Caps">Six Caps</option>
+								<option value="Playfair Display">Playfair Display</option>
+								<option value="Open Sans Condensed">Open Sans Condensed</option>
+								<option value="PT Serif">PT Serif</option>
+								<option value="Lora">Lora</option>
+								<option value="Titillium Web">Titillium Web</option>
+								<option value="Alata">Alata</option>
+								<option value="Fira Sans">Fira Sans</option>
+								<option value="Noto Sans KR">Noto Sans KR</option>
+								<option value="Bangers">Bangers</option>
+							</optgroup>
+						</select>
+					</label>
+					<label class="form__block">
+						<span class="form__title">Font Weight:</span>
+						<select name="fontWeight" class="form__select">
+							<option value="100">100</option>
+							<option value="200">200</option>
+							<option value="300">300</option>
+							<option value="400">400</option>
+							<option value="500">500</option>
+							<option value="600">600</option>
+							<option value="700">700</option>
+							<option value="800">800</option>
+							<option value="900">900</option>
+						</select>
+					</label>
+					<label class="form__block">
+						<span class="form__title">Text Align:</span>
+						<select name='textAlign' class="form__select">
+							<option value="left">Left</option>
+							<option value="center">Center</option>
+							<option value="right">Right</option>
+						</select>
+					</label>
+					<label class="form__block">
+						<span class="form__title">Font size:</span>
+						<input type="number" name="fontSize" placeholder="16" class="form__input">
+					</label>
+				</div>
+				<div class="form__row form__row_btns">
+					<button class="btn" id="btn__generate">Generate Table</button>
+					<button class="btn" id="btn__get">Get code</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="container container__table">
+			<table id="table"></table>
+			<div class="table-code">
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+
