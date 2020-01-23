@@ -5,8 +5,8 @@ const btnGet = document.querySelector('#btn__get');
 const table = document.querySelector('#table');
 const resultCode = document.querySelector('.table-code');
 
+//test
 
-// let autoGenerateFunc = () => { };
 
 btnGenerate.addEventListener('click', (e) => {
   e.preventDefault();
@@ -37,6 +37,7 @@ btnGenerate.addEventListener('click', (e) => {
 let createRowsFunction = (inputRowsValue, inputColumnsValue, inputTableWidth, inputBorderWidth,
                           inputHeadBgColor, inputRowBgColorEven, inputRowBgColorOdd, inputBorderBgColor, inputFontColor,
                           checkboxBorderCollapse, inputFontWeight, inputTextAlign, inputFontSize, inputFontFamily) => {
+
 
   for (let i = 0; i < inputColumnsValue; i++) {
     const inputHead = document.createElement('th');
@@ -114,4 +115,13 @@ let createRowsFunction = (inputRowsValue, inputColumnsValue, inputTableWidth, in
   });
 
 };
+
+
+
+form.addEventListener('click', (e) => {
+  e.preventDefault()
+
+
+
+})
 
