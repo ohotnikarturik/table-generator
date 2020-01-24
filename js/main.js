@@ -129,7 +129,18 @@ form.addEventListener('click', () => {
   createRowsAndColumns(inputRowsValue, inputColumnsValue); //to create rows and columns of table
   makeCollapse(); // to make collapse or not for table
 
-})
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
