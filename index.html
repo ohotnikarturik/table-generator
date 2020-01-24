@@ -10,9 +10,72 @@
 </head>
 <body>
 <div class="wrapper">
+	<header class="header">
+		<div class="container container__header">
+			<div class="copyright">
+				<h3 class="header__title">Made with love by Artur Okhotnichenko.</h3>
+				<img src="assets/img/iconmonstr-favorite-3-32.png" alt="" class="icon-love_header">
+			</div>
+			<div class="header__title">
+				<h1 class="title">HTML Table Generator</h1>
+			</div>
+			<div class="socials">
+				<ul class="social-list">
+					<li class="social-item">
+						<a href="https://vk.com/id19076882" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#vk"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="https://www.facebook.com/ohotnik.art?ref=bookmarks" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#fb"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="#" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#inst"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="#" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#twitter"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="https://github.com/ohotnikarturik" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#git"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="skype:archi130186?call" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#sk"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="tel:+358449254853" target="_blank" class="social-link">
+							<svg class="social-img">
+								<use xlink:href="assets/img/sprite.svg#phone"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
 	<div class="top">
 		<div class="container container__form">
-			<h1 class="title">HTML Table Generator</h1>
 			<form id="form">
 				<div class="form__row">
 					<label class="form__block">
@@ -56,10 +119,6 @@
 				</div>
 				<div class="form__row">
 					<label class="form__block">
-						<span class="form__title">Border collapse:</span>
-						<input type="checkbox" name="borderCollapse" class="form__checkbox">
-					</label>
-					<label class="form__block">
 						<span class="form__title">Font type:</span>
 						<select name="fontFamily" class="form__select">
 							<option value="#">Arial Narrow</option>
@@ -87,6 +146,18 @@
 						</select>
 					</label>
 					<label class="form__block">
+						<span class="form__title">Font size:</span>
+						<input type="number" name="fontSize" placeholder="16" class="form__input">
+					</label>
+					<label class="form__block">
+						<span class="form__title">Text Align:</span>
+						<select name='textAlign' class="form__select">
+							<option value="left">Left</option>
+							<option value="center">Center</option>
+							<option value="right">Right</option>
+						</select>
+					</label>
+					<label class="form__block">
 						<span class="form__title">Font Weight:</span>
 						<select name="fontWeight" class="form__select">
 							<option value="100">100</option>
@@ -101,33 +172,34 @@
 						</select>
 					</label>
 					<label class="form__block">
-						<span class="form__title">Text Align:</span>
-						<select name='textAlign' class="form__select">
-							<option value="left">Left</option>
-							<option value="center">Center</option>
-							<option value="right">Right</option>
-						</select>
+						<span class="form__title">Border collapse:</span>
+						<input type="checkbox" name="borderCollapse" class="form__checkbox">
 					</label>
-					<label class="form__block">
-						<span class="form__title">Font size:</span>
-						<input type="number" name="fontSize" placeholder="16" class="form__input">
-					</label>
-				</div>
-				<div class="form__row form__row_btns">
-					<button class="btn" id="btn__generate">Generate Table</button>
-					<button class="btn" id="btn__get">Get code</button>
 				</div>
 			</form>
+			<div class="form__row_btns">
+				<button class="btn" id="btn__generate">Generate Table</button>
+				<button class="btn" id="btn__get">Get code</button>
+			</div>
 		</div>
 	</div>
 	<div class="bottom">
 		<div class="container container__table">
 			<table id="table"></table>
-			<div class="table-code">
-			</div>
+			<div class="table-code"></div>
 		</div>
 	</div>
 </div>
+
+<footer class="footer">
+	<div class="container container__footer">
+		<div class="footer__copyright">
+			<img src="assets/img/iconmonstr-favorite-3-32.png" alt="" class="icon-love">
+			<h3 class="footer__title">Artur Okhotnichenko.</h3>
+			<h3 class="footer__year">Integrify 2020</h3>
+		</div>
+	</div>
+</footer>
 
 <script src="js/main.js"></script>
 
